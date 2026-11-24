@@ -1,74 +1,145 @@
-# Creepy Brosky
+# CREEPY BROSKY
 
-A small Unreal Engine 5 horror game prototype built with C++ and Blueprints. The project is currently focused on learning Unreal Engine gameplay systems step by step while building a playable first-person horror experience.
+> *A story too absurd to believe. A nightmare too real to escape.*
 
-## Current Features
+![Unreal Engine](https://img.shields.io/badge/Unreal%20Engine-5.8-black?logo=unrealengine)
+![C++](https://img.shields.io/badge/Language-C%2B%2B-blue?logo=cplusplus)
+![Platform](https://img.shields.io/badge/Platform-Windows-blue)
+![Status](https://img.shields.io/badge/Status-In%20Development-orange)
 
-- First-person exploration
-- Interactable doors
-- Contextual `[E]` interaction prompt
-- Smooth door opening and closing
-- Doors can open away from the player
-- Door obstruction safety to avoid pushing through the player
-- C++ gameplay logic exposed to Blueprint for configuration
+## About the Game
+
+**Creepy Brosky** is an independently developed first-person psychological survival horror game inspired by Indonesian urban legends, Javanese folklore, and the fear of the unknown.
+
+Combining supernatural encounters, environmental storytelling, and psychological tension, the game explores the uncertainty of memory, identity, and perception.
+
+## Synopsis
+
+*749 kilometers from home.*
+
+A young man named Brosky wakes up in the back of a pickup truck with no recollection of how he got there.
+
+Somehow, he has travelled from Bekasi to the remote surroundings of Mount Kelud, East Java.
+
+Lost in an unfamiliar forest, Brosky must search for a way home. But as darkness falls, strange occurrences begin to challenge his understanding of reality.
+
+A mysterious voice offers guidance. Familiar things begin to feel unfamiliar. What initially appears to be a search for safety slowly becomes something far more disturbing.
+
+**Something is wrong with this place.**
+
+*And perhaps, something is wrong with him.*
+
+## Creative Direction
+
+The game aims to deliver a horror experience that gradually evolves from immediate supernatural threats into lingering psychological dread.
+
+- First-person psychological survival horror
+- Indonesian folklore-inspired supernatural encounters
+- Atmospheric exploration and environmental storytelling
+- Unreliable narration
+- Survival-oriented gameplay
+- Tension-driven enemy encounters
+
+These elements represent the intended creative direction and are not all implemented in the current prototype.
+
+## Current Prototype
+
+The current development milestone focuses on establishing a functional gameplay foundation before expanding into the full narrative experience.
+
+### Gameplay Systems
+
+- First-person movement and exploration
+- Component-based player interaction system
+- Visibility-aware C++ line tracing
+- Interactive doors with smooth animation
+- Directional door opening and obstruction handling
+- Collectible keys and locked-door mechanics
+- Objective-based escape gameplay
+- Contextual interaction prompts and HUD feedback
+- Centralized win, loss, and restart states
+- Timed enemy capture mechanics
+
+### Enemy AI
+
+The project includes an evolving C++ enemy AI implementation featuring:
+
+- Patrol, Chase, and Search states
+- Unreal Engine NavMesh navigation
+- Line-of-sight detection
+- Last-known player position tracking
+- Pathfinding failure handling
+- Configurable detection and capture conditions
+
+Enemy navigation integration and gameplay validation remain in development.
+
+## Technical Architecture
+
+The project follows a modular approach that separates gameplay responsibilities across Unreal Engine C++ classes and Blueprint assets.
+
+| System | Responsibility |
+|---|---|
+| Interaction Component | Player input, line tracing, and object interaction |
+| Interactable Door | Door animation, locking, and obstruction handling |
+| Key Pickup | Item collection and player key state |
+| Exit Zone | Objective validation and escape completion |
+| GameMode | Gameplay state management |
+| HUD | Objectives, interaction prompts, and feedback |
+| Enemy Character | Enemy movement and capture behaviour |
+| AI Controller | Enemy perception, navigation, and decision-making |
+
+Core gameplay logic is implemented in C++, while Blueprints are used for configuration, asset integration, and presentation.
+
+## Technology Stack
+
+- Unreal Engine 5.8
+- C++
+- Unreal Engine Blueprints
+- Enhanced Input System
+- Unreal Navigation System
+- Visual Studio
+- Git and GitHub
 
 ## Controls
 
 | Action | Input |
 |---|---|
-| Move | WASD |
-| Look | Mouse |
+| Movement | WASD |
+| Camera | Mouse |
 | Interact | E |
+| Restart | R |
 
-## Tech Stack
+## Development Roadmap
 
-- Unreal Engine 5
-- C++
-- Blueprints
-- Visual Studio
+- [x] First-person gameplay foundation
+- [x] Player interaction system
+- [x] Interactive doors and key mechanics
+- [x] Escape objectives
+- [x] Win, loss, and restart flow
+- [x] Enemy capture system
+- [x] Internal Windows Development build
+- [ ] Complete enemy AI integration and validation
+- [ ] Atmospheric level design
+- [ ] Environmental audio and sound design
+- [ ] Main menu and settings
+- [ ] External playtesting
+- [ ] Narrative gameplay expansion
 
-## Project Status
+## Development Philosophy
 
-Early prototype.
+Creepy Brosky is both an independent game project and a practical learning environment for exploring game engineering.
 
-The current focus is on building and understanding one gameplay system at a time rather than rushing toward a large feature set.
+Development focuses on understanding gameplay architecture, C++ programming, real-time systems, artificial intelligence, debugging, and the relationship between native code and Unreal Engine's Blueprint system.
 
-## Planned Next Steps
+AI-assisted development tools are used alongside manual testing, code review, and ongoing technical learning.
 
-- Locked door state
-- Key pickup and unlocking
-- Flashlight
-- Fuse / power interaction
-- Basic environmental horror events
-- Simple enemy AI
-- Death and restart flow
-- Main menu
-- Package a playable Windows build
+## Repository Notice
 
-## Development Approach
+This repository contains the public technical implementation of Creepy Brosky.
 
-This project is also a learning project for Unreal Engine and C++. Features are being added incrementally so each system can be understood before expanding it.
+Internal narrative documentation, story development, and selected prototype assets are maintained privately. As a result, some assets or dependencies may require replacement before the public project can be built or played as intended.
 
-The current door system separates player interaction from door-specific behaviour:
+The game is currently in active development and does not represent a finished commercial release.
 
-```text
-Player Interaction
-        ↓
-Line Trace
-        ↓
-Interactable Door
-        ↓
-Toggle Door
-        ↓
-Smooth Door Animation
-```
+---
 
-As development continues, the interaction system will be expanded to support additional objects such as keys, flashlights, switches, and other horror-game interactions.
-
-## Playable escape demo
-
-Open `Content/CreepyBrosky/Maps/Lvl_EscapeDemo` and press Play. The project now opens this map by default.
-
-Find the brass key in the storage room, use E to unlock the service exit, and walk through it to finish. R restarts the run. Existing movement, mouse look and sprint remain available.
-
-This demo builds on the original `bLocked` and `bHasKey` work. It adds a real key pickup, objective HUD, gated completion and replay. It is an editor-playable prototype, not a packaged release. See [Docs/DemoLesson.md](Docs/DemoLesson.md) for ownership, execution flow, manual checks and the next exercise.
+*Not every road leads home.*
