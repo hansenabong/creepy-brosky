@@ -1,0 +1,42 @@
+# Unreal Engine generated folders
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+
+# Visual Studio
+.vs/
+*.sln
+*.suo
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.opendb
+*.slnx
+
+# Rider / JetBrains
+.idea/
+
+# Unreal per-user content
+Content/Developers/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Private development documentation
+/Docs/
+
+# Private character likeness assets
+/Content/CreepyBrosky/Creatures/HollowGuest/LikenessV2/
+
+# Generated build logs
+/Build/Windows/FileOpenOrder/
+*.log
+
+# Local credentials and environment files
+.env
+.env.*
+*.pem
+*.key
+*.pfx

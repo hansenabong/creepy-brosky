@@ -1,0 +1,26 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "{ECAA3337-4362-5119-9B44-DD8620C96DFE}",
+	"Category": "",
+	"Description": "",
+	"Plugins": [
+		{
+			"Name": "ModelingToolsEditorMode",
+			"Enabled": true,
+			"TargetAllowList": [
+				"Editor"
+			]
+		},
+		{
+			"Name": "GameplayStateTree",
+			"Enabled": true
+		}
+	],
+	"Modules": [
+		{
+			"Name": "CreepyBrosky",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}
